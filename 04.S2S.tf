@@ -10,6 +10,6 @@ resource "aws_vpn_connection" "main" {
   ]
 }
 resource "aws_vpn_connection_route" "local" {
-  destination_cidr_block = "10.100.0.0/24" # local or IDC subnet
+  destination_cidr_block = "10.100.0.0/24" # local or IDC ★SUBNET★ 10.10.10.234/24 (x) 10.10.10.0/24 (o)
   vpn_connection_id      = aws_vpn_connection.main.id
 }
